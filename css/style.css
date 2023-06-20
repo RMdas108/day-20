@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --indigo: #34497c;
+  --lightblue: #4b69b1;
+  --silver: #585858;
+  --lightsilver: #828282;
+  --orange: #fba702;
+  --darkindigo: #253458;
+  --black: #000;
+}
+body {
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  line-height: 1.3em;
+  color: var(--lightsilver);
+}
+/* Top Section */
+.top {
+  background-color: var(--indigo);
+  padding: 30px 0;
+  color: #fff;
+}
+.logo {
+  text-align: center;
+}
+.top p {
+  margin: 0;
+}
+/* First Screen Section */
+.first_screen {
+  background-image: url(../img/top.jpg);
+  /* height: calc(100vh - 110px); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  padding: 15px 0;
+}
+form{
+  background-color: var(--lightblue);
+  color: #fff;
+text-align: center;
+padding: 50px 15px;
+font-weight: bold;
+height:647px;
+}
+
+.first_screen h2{
+  font-size:36px;
+  text-transform: uppercase;
+  background-image: url(../img/line.svg);
+  background-repeat: repeat-x;
+  background-position: center;
+  width: 100%;
+  margin: 0 auto 15px;
+
+}
+.first_screen span{
+  background-color: var(--lightblue);
+  display: inline-block;
+  padding: 0 30px;
+}
+.first_screen h2 + p{
+  margin-bottom: 56px;
+}
+.first_screen p{
+  font-size: 1.5em;
+ 
+}
+.band + p {
+  margin-top: 54px;
+}
+
+
+input, button{
+  border:none;
+  outline: none;
+  display:block;
+  width: 100%;
+  height:50px;
+  margin-bottom: 15px;
+  padding:0 24px;
+  background-color: var(--indigo);
+  color:#fff;
+}
+input[type=email]{
+  margin-bottom:37px;
+}
+button{
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight:bold;
+  border-radius:3px;
+  font-size:24px;
+  padding:0 60px;
+  width:max-content;
+  margin-top:15px;
+}
+input:focus{
+  color: #fff;
+  background-color: var(--darkindigo);
+
+}
+.band{
+  background-image: url(../img/lenta.png);
+  height:117px;
+  margin:  0 -27px;
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.band::before, .band::after{
+  content:"";
+  display:block;
+  width:0;
+  height: 0;
+  border-top: 13px solid #a86f00;
+  position: absolute;
+  bottom:-13px;
+}
+.band::before{
+  border-left:12px solid transparent; 
+  left:0; 
+}
+.band::after{
+  
+ border-right: 12px solid transparent; 
+  right:0;
+}
+
+.steps {
+  background-image: url(../img/bg_01.png);
+
+};
+.gallery {
+
+}
+.testimonials {
+  background-image: url(../img/testimonials_bg.jpg);
+}
+.subscribe {
+  background-color: var(--orange);
+}
+.footer {
+  background-color: var(--black);
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    text-align: left;
+  }
+  .first_screen{
+    padding:70px 0;
+  }
+}
