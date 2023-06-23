@@ -43,9 +43,9 @@ form{
   background-color: var(--lightblue);
   color: #fff;
 text-align: center;
-padding: 50px 15px;
+padding: 50px 73px;
 font-weight: bold;
-height:647px;
+height:645px;
 }
 
 .first_screen h2{
@@ -107,7 +107,7 @@ input:focus{
 .band{
   background-image: url(../img/lenta.png);
   height:117px;
-  margin:  0 -27px;
+  margin:  0 -84px;
   position: relative;
   display:flex;
   justify-content: center;
@@ -136,7 +136,7 @@ input:focus{
 .steps {
   background-image: url(../img/bg_01.png);
 
-};
+}
 .gallery {
 
 }
@@ -156,4 +156,70 @@ input:focus{
   .first_screen{
     padding:70px 0;
   }
+}
+.steps .row h2{
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight:bold;
+  border-radius:3px;
+  font-size:24px;
+  color:var(--indigo);
+  margin-top:53px;
+  text-align: center;
+}
+.steps .row h2 + p {
+
+  font-family: "EB Garamond", sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+  color:var(--silver);
+  display: block;
+  padding:0 222px;
+  margin: 26px auto;
+}
+.step div{
+  width:277px;
+  max-width: 100%;
+  height:191px;
+  background-color: var(--darkindigo);
+  display:flex;
+  justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom:20px;
+    padding: 0 15px;
+}
+.steps .row:nth-child(2){
+  justify-content: space-around;
+}
+.step img{
+  display:block;
+  justify-content: center;
+  height:107px;
+  width:107px;
+}
+.step div::after{
+  content:"";
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  
+  border-top: 20px solid var(--darkindigo);
+  position: absolute;
+  bottom:-15px;
+}
+.step h3{
+  text-align: center;
+  font-family: "EB Garamond", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: var(--darkindigo);
 }
