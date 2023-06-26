@@ -1,3 +1,4 @@
+/* Global */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@
   --silver: #585858;
   --lightsilver: #828282;
   --orange: #fba702;
+  --brown: #a86f00;
   --darkindigo: #253458;
   --black: #000;
   --white: #fff;
@@ -19,22 +21,30 @@ body {
   line-height: 1.3em;
   color: var(--lightsilver);
 }
-/* Top Section */
+/* == Sections ==
+Top*/
 .top {
   background-color: var(--indigo);
   padding: 30px 0;
   color: var(--white);
 }
-.logo {
+/* First Screen
+Steps
+Gallery
+Testimonials
+Video Section
+Subscribe
+Footer  */
+.top .logo {
   text-align: center;
 }
 .top p {
   margin: 0;
 }
+/* Top Section */
 /* First Screen Section */
 .first_screen {
   background-image: url(../img/top.jpg);
-  /* height: calc(100vh - 110px); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -42,7 +52,7 @@ body {
 }
 form {
   background-color: var(--lightblue);
-  color:var(--white);
+  color: var(--white);
   text-align: center;
   padding: 50px 18px;
   font-weight: bold;
@@ -78,7 +88,30 @@ form {
   line-height: 1.6rem;
   display: none;
 }
-
+.first_screen button:hover{
+background-color: var(--white);
+transition: 0.2s;
+color:var(--darkindigo);
+}
+.subscribe button:hover{
+  background-color: var(--white);
+  transition: 0.2s;
+  color:var(--brown);
+  }
+  .footer a{
+    text-decoration: none;
+    color: var(--white);
+  }
+  .footer a:hover, .footer a:hover .bi-envelope-fill,.footer a:hover .bi-whatsapp{
+    color:var(--orange);
+  }
+  .bi-check-circle-fill {
+    color: var(--darkindigo);
+  }
+  .bi-envelope-fill,
+  .bi-whatsapp {
+    color: var(--white);
+  }
 input,
 button {
   border: none;
@@ -89,7 +122,7 @@ button {
   margin-bottom: 15px;
   padding: 0 24px;
   background-color: var(--indigo);
-  color:var(--white);
+  color: var(--white);
 }
 button {
   background-color: var(--darkindigo);
@@ -104,7 +137,6 @@ button {
   border-radius: 3px;
   font-size: 24px;
   letter-spacing: 1px;
-
   width: max-content;
   margin-top: 15px;
 }
@@ -127,7 +159,7 @@ input:focus {
   display: block;
   width: 0;
   height: 0;
-  border-top: 13px solid #a86f00;
+  border-top: 13px solid var(--brown);
   position: absolute;
   bottom: -13px;
 }
@@ -139,7 +171,6 @@ input:focus {
   border-right: 12px solid transparent;
   right: 0;
 }
-
 .steps {
   background-image: url(../img/bg_01.png);
 }
@@ -152,24 +183,17 @@ input:focus {
   object-fit: cover;
   object-position: center center;
 }
-.wrap + p {
+.gallery p {
   margin: 20px 25px;
   padding: 10px 5px;
   text-align: center;
-  font-family: "EB Garamond", serif;
-  font-size: 16px;
   font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0em;
   text-align: center;
   color: #c4c4c4;
 }
 .photo_man {
-  display: inline-flex;
-  justify-content: center;
   margin: 42px 0 49px;
 }
-
 .testimonials {
   background-image: url(../img/testimonials_bg.jpg);
   background-position: center top;
@@ -177,12 +201,10 @@ input:focus {
 }
 .testimonials p {
   color: var(--darkindigo);
-  font-family: EB Garamond;
   font-size: 30px;
   font-style: italic;
   font-weight: 700;
   line-height: 45px;
-  letter-spacing: 0em;
   text-align: center;
   padding: 0 15px;
 }
@@ -196,12 +218,8 @@ input:focus {
   margin-top: 30px;
 }
 .testimonials h2 {
-  font-family: "EB Garamond", sans-serif;
   font-size: 30px;
-  font-weight: 400;
   line-height: 45px;
-  letter-spacing: 0em;
-  text-align: center;
   text-transform: uppercase;
   color: var(--darkindigo);
   margin-bottom: 50px;
@@ -213,27 +231,28 @@ input:focus {
   background-color: var(--black);
   display: none;
 }
-.footer .row{
+.footer .row {
   gap: 30px;
   padding-top: 43px;
 }
-.footer h4{
- color: var(--orange);
- font-weight: 700;
- margin-bottom: 25px;
+.footer h4 {
+  color: var(--orange);
+  font-weight: 700;
+  margin-bottom: 25px;
 }
-.footer p, .footer span{
-  color:var(--white);
+.footer p,
+.footer span {
+  color: var(--white);
 }
 .footer span {
-display:block;
+  display: block;
 }
 .footer i {
-  display:inline-block;
+  display: inline-block;
   margin-right: 10px;
-  }
-.footer{
-  padding-bottom:60px;
+}
+.footer {
+  padding-bottom: 60px;
 }
 .video_section {
   display: none;
@@ -251,7 +270,7 @@ display:block;
   line-height: 24px;
   margin: 20px 0;
 }
-.subscribe .row div button {
+.subscribe button {
   margin: 21px auto 38px;
   width: 216px;
   border-radius: 5px;
@@ -271,13 +290,12 @@ display:block;
   .subscribe {
     height: 281px;
   }
-  .subscribe .row div > * {
-    margin: 0 auto;
-    text-align: center;
-  }
   .subscribe .row p {
     margin: 28px auto;
     line-height: initial;
+  }
+  .subscribe input {
+    color: var(--black);
   }
 }
 @media screen and (min-width: 414px) {
@@ -287,6 +305,9 @@ display:block;
   }
   .video-list {
     margin: 56px auto 0;
+  }
+  .video_section .row {
+    margin: 0px 0 54px;
   }
 }
 @media screen and (min-width: 576px) {
@@ -301,7 +322,6 @@ display:block;
     margin: 0 auto 40px;
     line-height: 1.6rem;
   }
-
   .first_screen h2 {
     background-image: none;
   }
@@ -318,7 +338,6 @@ display:block;
     width: 100%;
   }
 }
-
 @media screen and (min-width: 768px) {
   .logo {
     text-align: left;
@@ -331,7 +350,6 @@ display:block;
     width: 76%;
     margin: 0 auto;
   }
-
   .first_screen {
     padding: 70px 0;
   }
@@ -372,32 +390,29 @@ display:block;
     padding: 0;
   }
   .video_section .row:nth-child(2) {
-    margin: 0px;
+    margin: -14px 0 54px;
   }
   .subscribe {
     height: 197px;
   }
-  .subscribe .row div button {
+  .subscribe button {
     margin: 0 auto;
   }
-  .footer{
-    display:block;
+  .footer {
+    display: block;
   }
   .footer .row {
     gap: 0px;
   }
-  
-  .footer .container .row > div{
-padding-left: 15px;
-padding-right: 15px;
+  .footer .container .row > div {
+    padding-left: 15px;
+    padding-right: 15px;
   }
-  .footer .container{
+  .footer .container {
     padding-left: 5px;
     padding-right: 5px;
-}
   }
-
-
+}
 @media screen and (min-width: 1200px) {
   .wrap + p {
     margin: 25px 9px 50px;
@@ -412,14 +427,8 @@ padding-right: 15px;
   .testimonials h2 {
     margin: 25px 0 80px;
   }
-  .video_col {
-    width: 55%;
-  }
   .video_section {
     margin-bottom: 76px;
-  }
-  .video_section .row {
-    margin: 0px 0 54px;
   }
   .video-list {
     margin: 0;
@@ -429,14 +438,13 @@ padding-right: 15px;
   }
   .subscribe .row {
     align-items: center;
-    justify-content: center;
-    gap: 12px;
+    justify-content: initial;
   }
   .subscribe .row p {
     text-align: left;
     margin: 38px auto;
   }
-  .subscribe .row div button {
+  .subscribe button {
     width: 175px;
   }
 }
@@ -453,14 +461,12 @@ padding-right: 15px;
   .band + p {
     height: 124px;
     width: 100%;
-    margin: 0 auto;
   }
   .step h3 + p {
     padding: 0 20px;
     margin: 0 0 40px 0;
   }
 }
-
 .steps .row h2,
 .gallery .row h2,
 .video_section .row h2 {
@@ -471,20 +477,15 @@ padding-right: 15px;
   font-size: 28px;
   color: var(--indigo);
   margin-top: 53px;
-  text-align: center;
 }
 .steps .row h2 + p,
 .gallery .row h2 + p,
 .video_section .row h2 + p {
-  font-family: "EB Garamond", sans-serif;
   font-size: 24px;
   font-style: italic;
   font-weight: 700;
   line-height: 32px;
-  letter-spacing: 0em;
-  text-align: center;
   color: var(--silver);
-  display: block;
   margin: 26px auto;
 }
 .step div {
@@ -498,9 +499,6 @@ padding-right: 15px;
   margin-bottom: 20px;
   padding: 0 15px;
 }
-.steps .row:nth-child(2) {
-  justify-content: space-around;
-}
 .step img {
   display: block;
   justify-content: center;
@@ -513,22 +511,17 @@ padding-right: 15px;
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-
   border-top: 20px solid var(--darkindigo);
   position: absolute;
   bottom: -15px;
 }
 .step h3 {
   text-align: center;
-  font-family: "EB Garamond", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
-  letter-spacing: 0em;
-  text-align: center;
   color: var(--darkindigo);
 }
-
 .video_section ul {
   list-style-type: none;
   color: #747171;
@@ -542,21 +535,15 @@ padding-right: 15px;
   padding: 7px;
   font-size: 18px;
 }
-.bi-check-circle-fill {
-  color: var(--darkindigo);
-}
-.bi-envelope-fill, .bi-whatsapp{
-  color:var(--white);
-}
+
 .video_section img {
   display: block;
   width: 100%;
-  height: 100%;
 }
 .subscribe button {
-  background-color: #a86f00;
+  background-color: var(--brown);
 }
 .subscribe input {
-  background-color: #fff;
+  background-color: var(--white);
   margin-bottom: 0;
 }
