@@ -50,7 +50,7 @@ Footer  */
   background-position: center top;
   padding: 15px 0;
 }
-form {
+.first_screen form {
   background-color: var(--lightblue);
   color: var(--white);
   text-align: center;
@@ -286,7 +286,7 @@ cursor: pointer;
   border-radius: 5px;
 }
 @media screen and (min-width: 314px) {
-  form {
+  .first_screen  form {
     height: 645px;
   }
   .band + p {
@@ -321,7 +321,7 @@ cursor: pointer;
   }
 }
 @media screen and (min-width: 576px) {
-  form {
+  .first_screen form {
     padding: 50px 18px;
   }
   .band + p {
@@ -363,7 +363,7 @@ cursor: pointer;
   .first_screen {
     padding: 70px 0;
   }
-  form {
+  .first_screen form {
     padding: 50px 30px;
   }
   .band {
@@ -462,7 +462,7 @@ cursor: pointer;
   .first_screen {
     background-size: 125%;
   }
-  form {
+  .first_screen form {
     padding: 50px 73px;
   }
   .band {
